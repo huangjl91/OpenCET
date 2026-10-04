@@ -1,0 +1,18 @@
+# 统一换行符：仓库里一律存 LF，检出时按平台转换。
+# 没有这个文件时，Windows 上 core.autocrlf=true 会把 shell 脚本也转成 CRLF，
+# 别人在 Linux / WSL 下跑 tools/*.sh 就会报 "$'\r': command not found"。
+* text=auto
+
+# 这几个必须保持 LF
+*.sh      text eol=lf
+
+# 二进制文件不做换行符转换
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.pdf     binary
+*.woff    binary
+*.woff2   binary
+*.ttf     binary

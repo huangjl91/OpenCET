@@ -1,0 +1,45 @@
+# 依赖
+node_modules/
+target/
+*.class
+
+# 构建产物
+dist/
+build/
+release/
+
+# 本地环境变量（含密钥，勿提交）
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+logs/
+
+# 编辑器
+.idea/
+.vscode/
+*.iml
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 本地运行时产物（测试脚本、临时日志、探测用数据目录）
+.runtime/
+.build-tmp/
+
+# 用户数据：API Key、学习记录、AI 聊天历史全在 localStorage，
+# 落在 Electron 的用户数据目录（%APPDATA%\opencet-desktop）或浏览器里，
+# 都不在仓库内。这里额外兜一层，防止有人把这类目录拷进来。
+user-data/
+Local Storage/
+*.sqlite
+*.db
+
+# 说明：AI Key 存在 localStorage['opencet.ai.config']，不在源码里，
+# 提交代码不会带出去。详见 README「关于 API Key」一节。
+
+# Vite 加载配置时产生的临时文件
+vite.config.ts.timestamp-*

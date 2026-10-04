@@ -1,0 +1,72 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: opencet-backend
+
+  # ---------------- MySQL ----------------
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/opencet?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+
+  # ---------------- Redis ----------------
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password:
+      database: 0
+      timeout: 5s
+      lettuce:
+        pool:
+          max-active: 16
+          max-idle: 8
+          min-idle: 2
+
+  # 首次部署可执行 src/main/resources/db/schema.sql 与 data.sql
+  # 这里保持 never，避免每次启动覆盖真实数据
+  sql:
+    init:
+      mode: never
+
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+# ---------------- MyBatis-Plus ----------------
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+logging:
+  level:
+    root: info
+    com.cet: debug
+    org.springframework.web: info
+
+# ---------------- 自定义配置 ----------------
+opencet:
+  # 前端本地模式开关说明（仅文档用途）
+  cors:
+    allowed-origins: "*"

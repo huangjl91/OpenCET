@@ -1,0 +1,41 @@
+# OpenCET 生产部署（Nginx）示例
+# 用法：把本文件内容并入 nginx.conf 的 http{}，或放到 conf.d/opencet.conf 后 reload
+#
+# 前置：
+#   1) 后端已起在 127.0.0.1:8080（spring-boot:run 或 java -jar）
+#   2) 前端已构建：cd frontend && npm run build  -> 产出 frontend/dist
+#
+# 说明：
+#   - root 指向构建产物 dist 的绝对路径（请改成你机器上的真实路径）
+#   - /api/ 反代到后端 8080，前端无需改动（VITE_API_BASE 留空走相对路径即可）
+#   - location / 用 try_files 兜底 SPA 路由（刷新子页面不 404）
+
+server {
+    listen 80;
+    server_name localhost;          # 改成你的域名或服务器 IP
+
+    root E:/workbuddy开发/cet-master/frontend/dist;   # TODO: 改成实际绝对路径
+    index index.html;
+
+    # 静态资源长缓存（带 hash 的文件可放心缓存）
+    location /assets/ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # SPA 路由兜底
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 后端 API 反向代理
+    location /api/ {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        # 跨域/大响应头按需放开
+        proxy_read_timeout 60s;
+    }
+}

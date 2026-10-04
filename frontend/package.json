@@ -1,0 +1,27 @@
+{
+  "name": "opencet-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "英语四六级（CET-4 / CET-6）在线学习平台 - 前端",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "mammoth": "^1.12.3",
+    "pdfjs-dist": "^4.10.38",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vue-tsc": "^2.0.19"
+  }
+}

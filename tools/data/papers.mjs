@@ -1,0 +1,279 @@
+// 真题样例数据（既是内置示范卷，也是「真题拆解」自动切分后落库的标准结构）
+// section.type: writing 写作 | listening 听力 | cloze 选词填空 | reading 阅读理解 | translation 翻译
+export const PAPERS = [
+  {
+    title: '2023年6月大学英语四级考试真题（第1套）',
+    level: 'CET4',
+    yearMonth: '2023-06',
+    source: '内置示范卷',
+    sections: [
+      {
+        type: 'writing',
+        title: 'Part I  Writing（写作）',
+        passage: 'Directions: For this part, you are allowed 30 minutes to write an essay on the use of short videos. You should write at least 120 words but no more than 180 words.',
+        questions: [
+          {
+            no: 1,
+            stem: 'Directions: For this part, you are allowed 30 minutes to write an essay on the use of short videos. You should write at least 120 words but no more than 180 words.',
+            options: [],
+            answer: '参考范文：Nowadays short videos have become part of our daily life. Whenever we take a bus or wait in a queue, we can see people watching short videos on their phones. Some people welcome this trend, while others worry about its negative effects.\n\nIn my opinion, short videos are a double-edged sword. On the one hand, they provide us with knowledge and relaxation within a few minutes, and they give ordinary people a stage to show their talents. On the other hand, since the content is not always reliable, viewers, especially teenagers, may be misled. Worse still, it is easy to become addicted and waste hours that should be spent on study or work.\n\nTherefore, we should make rational use of short videos. We can set a time limit for ourselves and choose educational content instead of mindless entertainment. Only in this way can we enjoy the convenience of new media without being controlled by it.',
+            analysis: '写作结构：现象引入（第一段）→ 利弊分析（第二段）→ 提出建议（第三段）。加分表达：a double-edged sword（双刃剑）、on the one hand... on the other hand...、be addicted to（沉迷）、make rational use of（理性利用）。注意末句 Only in this way 引起的部分倒装。',
+          },
+        ],
+      },
+      {
+        type: 'listening',
+        title: 'Part II  Listening Comprehension（听力理解）Section A  新闻听力',
+        passage: 'News Report One\nA new report says the number of people riding bicycles to work in the United States has increased by 60 percent over the past ten years. The report was based on data collected from 200 cities. Researchers say the increase is largely due to improved bike lanes and a growing awareness of the health benefits of cycling.',
+        questions: [
+          {
+            no: 1,
+            stem: 'What does the new report say about bike riding in the United States?',
+            options: [
+              'A) The number of cyclists has risen sharply.',
+              'B) Bike lanes are being removed in many cities.',
+              'C) Cycling accidents have doubled in ten years.',
+              'D) Most Americans cycle to work every day.',
+            ],
+            answer: 'A',
+            analysis: '新闻开头即点明：the number of people riding bicycles to work... has increased by 60 percent over the past ten years，与 A 项 The number of cyclists has risen sharply 同义替换。B、C、D 均与原文不符或无中生有。',
+          },
+          {
+            no: 2,
+            stem: 'What is the main reason for the increase according to researchers?',
+            options: [
+              'A) The rising price of petrol.',
+              'B) Better bike lanes and health awareness.',
+              'C) Government financial support.',
+              'D) The popularity of bike-sharing apps.',
+            ],
+            answer: 'B',
+            analysis: '原文 due to improved bike lanes and a growing awareness of the health benefits of cycling，due to 后即原因，对应 B 项。听力中 due to / because of / thanks to 后常接考点。',
+          },
+        ],
+      },
+      {
+        type: 'listening',
+        title: 'Part II  Listening Comprehension（听力理解）Section B  长对话',
+        passage: 'M: Hi, Sarah. I heard you’ve just come back from a volunteer trip in Yunnan. How was it?\nW: It was amazing. I taught English at a primary school in a small village for two weeks.\nM: That sounds great. Was it difficult?\nW: The teaching itself wasn’t hard, but living conditions were quite basic. There was no hot water, and the Internet signal was very weak.\nM: Would you do it again?\nW: Definitely. The children were so eager to learn that I forgot all the discomfort.',
+        questions: [
+          {
+            no: 3,
+            stem: 'What did Sarah do in Yunnan?',
+            options: [
+              'A) She travelled around the province.',
+              'B) She taught English in a village school.',
+              'C) She worked on a local farm.',
+              'D) She did research on local culture.',
+            ],
+            answer: 'B',
+            analysis: '女士明确说 I taught English at a primary school in a small village for two weeks，直接对应 B。注意 A 项 travelled 是典型干扰项。',
+          },
+          {
+            no: 4,
+            stem: 'What does Sarah say about her living conditions there?',
+            options: [
+              'A) They were quite comfortable.',
+              'B) They were fairly basic.',
+              'C) They were better than expected.',
+              'D) They were unacceptable.',
+            ],
+            answer: 'B',
+            analysis: '原文 but living conditions were quite basic，转折词 but 后为考点，直接对应 B 项 basic。',
+          },
+        ],
+      },
+      {
+        type: 'cloze',
+        title: 'Part III  Reading Comprehension（阅读理解）Section A  选词填空',
+        passage: 'Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage.\n\nReading books has a __26__ effect on children. According to a recent study, children who read for pleasure every day __27__ to have larger vocabularies and better writing skills than those who seldom read. The study also found that reading aloud to children before bed helps them __28__ better language habits at an early age. However, researchers warn that the __29__ of reading matters more than the time spent on it. Parents are __30__ to choose books that match their children’s interests.\n\nA) advised  B) acquire  C) beneficial  D) efficient  E) impact  F) frequency  G) tend  H) relax  I) quality  J) consequently',
+        questions: [
+          { no: 26, stem: 'Reading books has a __26__ effect on children.', options: ['A) advised','B) acquire','C) beneficial','D) efficient','E) impact','F) frequency','G) tend','H) relax','I) quality','J) consequently'], answer: 'C', analysis: '空格前有冠词 a、后有名词 effect，需填形容词。beneficial effect「有益的影响」符合句意。efficient 指「效率高的」，修饰 effect 不搭配。' },
+          { no: 27, stem: 'children who read for pleasure every day __27__ to have larger vocabularies', options: ['A) advised','B) acquire','C) beneficial','D) efficient','E) impact','F) frequency','G) tend','H) relax','I) quality','J) consequently'], answer: 'G', analysis: '空格后为 to do，需填不及物动词且可接 to do：tend to do「倾向于、往往」。acquire 为及物动词，不接 to do。' },
+          { no: 28, stem: 'helps them __28__ better language habits', options: ['A) advised','B) acquire','C) beneficial','D) efficient','E) impact','F) frequency','G) tend','H) relax','I) quality','J) consequently'], answer: 'B', analysis: 'help sb. (to) do 结构，需填动词原形且带宾语 habits：acquire habits「养成习惯」为固定搭配。' },
+          { no: 29, stem: 'researchers warn that the __29__ of reading matters more than the time spent on it', options: ['A) advised','B) acquire','C) beneficial','D) efficient','E) impact','F) frequency','G) tend','H) relax','I) quality','J) consequently'], answer: 'I', analysis: 'the + 名词 + of 结构。后文说「比花的时间更重要」，故强调「质量」quality。frequency「频率」与 time 语义重合，逻辑不通。' },
+          { no: 30, stem: 'Parents are __30__ to choose books that match their children’s interests.', options: ['A) advised','B) acquire','C) beneficial','D) efficient','E) impact','F) frequency','G) tend','H) relax','I) quality','J) consequently'], answer: 'A', analysis: 'be + 过去分词 + to do，需填可接 sb. to do 的动词被动式：be advised to do「被建议做某事」。' },
+        ],
+      },
+      {
+        type: 'reading',
+        title: 'Part III  Reading Comprehension（阅读理解）Section C  仔细阅读  Passage One',
+        passage: 'For years, experts have warned that sitting for long hours is harmful to our health. A recent study adds a new detail: how you sit may matter less than how often you stand up. Researchers followed 5,000 office workers for three years and found that those who took a short break every 30 minutes had a much lower risk of heart disease than those who sat continuously for hours, even if the latter exercised regularly after work.\n\nThe researchers suggest a simple rule: stand up, stretch, or walk for two or three minutes every half an hour. "It is not the total sitting time but the lack of interruption that does the damage," says Dr. Lee, the leading author. Companies are also encouraged to provide adjustable desks so that employees can alternate between sitting and standing.',
+        questions: [
+          {
+            no: 31,
+            stem: 'What does the recent study mainly find?',
+            options: [
+              'A) Sitting for long hours is no longer a health risk.',
+              'B) How often one stands up matters more than how one sits.',
+              'C) Regular exercise after work can remove all health risks.',
+              'D) Adjustable desks are a must in every office.',
+            ],
+            answer: 'B',
+            analysis: '首段第二句 how you sit may matter less than how often you stand up 是全文主题句，对应 B。A 与原文相反；C 的 remove all risks 过于绝对；D 是建议而非研究发现。',
+          },
+          {
+            no: 32,
+            stem: 'According to Dr. Lee, what actually causes the damage?',
+            options: [
+              'A) The total amount of time one sits.',
+              'B) The lack of interruption in sitting.',
+              'C) The wrong way of sitting.',
+              'D) Working out after office hours.',
+            ],
+            answer: 'B',
+            analysis: '直接引语 It is not the total sitting time but the lack of interruption that does the damage，强调句型中 but 后为真正原因，选 B。',
+          },
+          {
+            no: 33,
+            stem: 'What is suggested for office workers?',
+            options: [
+              'A) Exercise for an hour after work.',
+              'B) Take a short break every 30 minutes.',
+              'C) Stand up while working all day.',
+              'D) Give up desk jobs completely.',
+            ],
+            answer: 'B',
+            analysis: '第二段 a simple rule: stand up, stretch, or walk for two or three minutes every half an hour，对应 B。',
+          },
+        ],
+      },
+      {
+        type: 'translation',
+        title: 'Part IV  Translation（翻译）',
+        passage: 'Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English.',
+        questions: [
+          {
+            no: 1,
+            stem: '剪纸是中国传统的民间艺术，有着两千多年的历史。剪纸作品通常用红纸制作，因为红色在中国文化中象征着吉祥和幸福。人们常把剪纸贴在窗户或门上，以增添节日的喜庆气氛。如今，剪纸不仅深受中国人喜爱，也吸引了越来越多的外国友人学习这门手艺。',
+            options: [],
+            answer: 'Paper cutting is a traditional Chinese folk art with a history of more than 2,000 years. Paper cuttings are usually made of red paper, because red symbolizes good fortune and happiness in Chinese culture. People often paste them on windows or doors to add to the festive atmosphere. Today, paper cutting is not only deeply loved by the Chinese people, but also attracts a growing number of foreign friends who want to learn this craft.',
+            analysis: '核心词汇：folk art 民间艺术 / symbolize 象征 / good fortune 吉祥 / festive atmosphere 节日气氛 / craft 手艺。语法点：① with a history of + 时间段；② be made of（能看出原材料用 of）；③ not only... but also... 连接并列谓语。',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: '2023年6月大学英语六级考试真题（第1套）',
+    level: 'CET6',
+    yearMonth: '2023-06',
+    source: '内置示范卷',
+    sections: [
+      {
+        type: 'writing',
+        title: 'Part I  Writing（写作）',
+        passage: 'Directions: For this part, you are allowed 30 minutes to write an essay commenting on the saying "The best way to predict the future is to create it." You should write at least 150 words but no more than 200 words.',
+        questions: [
+          {
+            no: 1,
+            stem: 'Directions: For this part, you are allowed 30 minutes to write an essay commenting on the saying "The best way to predict the future is to create it." You should write at least 150 words but no more than 200 words.',
+            options: [],
+            answer: '参考范文：There is a well-known saying that the best way to predict the future is to create it. Simple as it sounds, the remark carries a profound message: our future is not something that happens to us, but something we shape with our own hands.\n\nThe truth of this saying can be illustrated in many aspects. In the field of science, every major breakthrough — from the steam engine to artificial intelligence — was achieved not by those who waited for the future to arrive, but by those who dared to invent it. At a personal level, students who set clear goals and work steadily towards them are far more likely to create the future they desire than those who merely daydream about it.\n\nAdmittedly, we cannot control everything, and unexpected difficulties are inevitable. Nevertheless, this is precisely why action matters. Rather than passively waiting, we should equip ourselves with knowledge and courage, and then take the first step. In doing so, we shall find that the future is not a mystery to be predicted, but a reality to be created.',
+            analysis: '六级写作要求 150–200 词，论证需更充分。结构：阐释名言 → 举例论证（科技 + 个人）→ 让步转折 + 升华。加分表达：Simple as it sounds（倒装让步）、illustrate、breakthrough、Admittedly、Nevertheless、equip oneself with。',
+          },
+        ],
+      },
+      {
+        type: 'listening',
+        title: 'Part II  Listening Comprehension（听力理解）Section A  长对话',
+        passage: 'W: Professor Blake, I’m writing an article about urban green space. Could you share your views?\nM: Certainly. Many cities are expanding parks, but the real question is whether these spaces are equally accessible to all residents.\nW: Interesting. What do you mean by "accessible"?\nM: Well, in some cities, large parks are located in wealthy suburbs, while densely populated low-income neighborhoods have almost no green space within walking distance.\nW: So the total area of parks can be misleading.\nM: Exactly. What matters is the distribution, not just the total.',
+        questions: [
+          {
+            no: 1,
+            stem: 'What is the woman doing?',
+            options: [
+              'A) She is designing a city park.',
+              'B) She is writing an article on urban green space.',
+              'C) She is interviewing for a newspaper job.',
+              'D) She is doing a survey on public transport.',
+            ],
+            answer: 'B',
+            analysis: '开场即说明目的 I’m writing an article about urban green space，直接对应 B。注意 A 项 designing 为常见偷换动词的干扰。',
+          },
+          {
+            no: 2,
+            stem: 'What does Professor Blake say about parks in some cities?',
+            options: [
+              'A) They are too small to be useful.',
+              'B) They are unevenly distributed.',
+              'C) They are mainly used by tourists.',
+              'D) They are poorly maintained.',
+            ],
+            answer: 'B',
+            analysis: '教授指出大公园位于富人区，而低收入社区几乎没有步行可达的绿地，说明分布不均，选 B。末句 What matters is the distribution, not just the total 为总结句。',
+          },
+        ],
+      },
+      {
+        type: 'cloze',
+        title: 'Part III  Reading Comprehension（阅读理解）Section A  选词填空',
+        passage: 'Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage.\n\nThe idea that intelligence is fixed has been thoroughly __26__ by modern research. Scientists now agree that the brain remains __27__ throughout life, forming new connections in response to learning. This quality, known as neuroplasticity, means that effort and strategy can __28__ make a difference. Students who believe that ability can grow are more likely to __29__ difficult tasks rather than avoid them. Teachers therefore play a __30__ role: the feedback they give shapes students’ beliefs about their own potential.\n\nA) flexible  B) consequently  C) embrace  D) crucial  E) abandoned  F) indeed  G) reluctant  H) refuted  I) innate  J) outcome',
+        questions: [
+          { no: 26, stem: 'The idea that intelligence is fixed has been thoroughly __26__ by modern research.', options: ['A) flexible','B) consequently','C) embrace','D) crucial','E) abandoned','F) indeed','G) reluctant','H) refuted','I) innate','J) outcome'], answer: 'H', analysis: 'has been + 过去分词，主语是 idea（观点），与之搭配的是 refute（驳斥）。abandoned 通常接计划、做法，不接 idea 的被动式此处语义不符。' },
+          { no: 27, stem: 'the brain remains __27__ throughout life', options: ['A) flexible','B) consequently','C) embrace','D) crucial','E) abandoned','F) indeed','G) reluctant','H) refuted','I) innate','J) outcome'], answer: 'A', analysis: 'remains（系动词）+ 形容词。后文 forming new connections 说明大脑具有可塑性，选 flexible。' },
+          { no: 28, stem: 'effort and strategy can __28__ make a difference', options: ['A) flexible','B) consequently','C) embrace','D) crucial','E) abandoned','F) indeed','G) reluctant','H) refuted','I) innate','J) outcome'], answer: 'F', analysis: '空格位于情态动词 can 与动词 make 之间，需填副词。indeed 用于强调「确实」，符合语境。consequently 表因果，此处无因果逻辑。' },
+          { no: 29, stem: 'are more likely to __29__ difficult tasks rather than avoid them', options: ['A) flexible','B) consequently','C) embrace','D) crucial','E) abandoned','F) indeed','G) reluctant','H) refuted','I) innate','J) outcome'], answer: 'C', analysis: 'be likely to + 动词原形，且 rather than avoid 提示前后反义，故用 embrace（拥抱、接受）与 avoid 构成对比。' },
+          { no: 30, stem: 'Teachers therefore play a __30__ role', options: ['A) flexible','B) consequently','C) embrace','D) crucial','E) abandoned','F) indeed','G) reluctant','H) refuted','I) innate','J) outcome'], answer: 'D', analysis: 'play a(n) + 形容词 + role 为固定搭配，需形容词。crucial role「关键作用」，therefore 提示结论，符合逻辑。' },
+        ],
+      },
+      {
+        type: 'reading',
+        title: 'Part III  Reading Comprehension（阅读理解）Section C  仔细阅读  Passage One',
+        passage: 'Some economists argue that a four-day work week would boost productivity rather than reduce it. Their claim rests on a simple observation: output per hour tends to fall sharply after about 35 hours of work, while fatigue, errors and sick leave rise. In trials conducted in several countries, companies that cut working hours to 32 without cutting pay reported unchanged or even increased output.\n\nSceptics counter that such results depend heavily on the industry. In jobs where output is hard to measure — research, design or management — fewer hours may simply mean less done. They also point out that most trials lasted less than a year, so the long-term effects remain unclear. What both sides agree on, however, is that the debate is no longer about whether flexible work is possible, but about how to organise it.',
+        questions: [
+          {
+            no: 31,
+            stem: 'What is the argument for a four-day work week?',
+            options: [
+              'A) It allows companies to cut salaries.',
+              'B) It may increase rather than lower productivity.',
+              'C) It guarantees employees better health.',
+              'D) It is required by new labour laws.',
+            ],
+            answer: 'B',
+            analysis: '首句即论点 a four-day work week would boost productivity rather than reduce it，boost 与 increase 同义替换，选 B。A 与 without cutting pay 相反；C 的 guarantee 太绝对；D 无中生有。',
+          },
+          {
+            no: 32,
+            stem: 'What do sceptics say about the trials?',
+            options: [
+              'A) They were too short to show long-term effects.',
+              'B) They proved the policy works in every industry.',
+              'C) They were poorly designed and biased.',
+              'D) They should be repeated in larger companies.',
+            ],
+            answer: 'A',
+            analysis: '第二段 most trials lasted less than a year, so the long-term effects remain unclear，对应 A。注意 sceptics 的观点常出现在第二段，是六级高频考点。',
+          },
+          {
+            no: 33,
+            stem: 'What do both sides agree on?',
+            options: [
+              'A) Four-day weeks should be made compulsory.',
+              'B) Flexible work is possible; the question is how to organise it.',
+              'C) Working hours must never exceed 32 per week.',
+              'D) Productivity cannot be measured objectively.',
+            ],
+            answer: 'B',
+            analysis: '末句 What both sides agree on... is that the debate is no longer about whether flexible work is possible, but about how to organise it，直接对应 B。',
+          },
+        ],
+      },
+      {
+        type: 'translation',
+        title: 'Part IV  Translation（翻译）',
+        passage: 'Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English.',
+        questions: [
+          {
+            no: 1,
+            stem: '京杭大运河是世界上里程最长、工程最大的古代运河，全长约1,797公里。它始建于公元前5世纪，隋朝时期大规模扩建，成为连接中国南北的交通大动脉。大运河不仅促进了沿线城市的经济发展，也推动了南北文化的交流与融合。2014年，大运河被列入《世界遗产名录》。',
+            options: [],
+            answer: 'The Beijing-Hangzhou Grand Canal is the longest and largest ancient canal in the world, with a total length of about 1,797 kilometers. First built in the 5th century BC, it was greatly expanded during the Sui Dynasty and became a major transport artery linking northern and southern China. The Grand Canal not only promoted the economic development of the cities along its route, but also facilitated cultural exchange and integration between the north and the south. In 2014, it was inscribed on the World Heritage List.',
+            analysis: '核心词汇：the Grand Canal 大运河 / transport artery 交通大动脉 / facilitate 促进 / integration 融合 / be inscribed on 被列入。语法点：① 最高级并列 the longest and largest；② 过去分词作状语 First built in...；③ 现在分词作后置定语 linking northern and southern China。',
+          },
+        ],
+      },
+    ],
+  },
+]

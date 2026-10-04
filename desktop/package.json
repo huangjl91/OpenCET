@@ -1,0 +1,44 @@
+{
+  "name": "opencet-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpenCET · 英语四六级在线学习平台（桌面版）",
+  "main": "main.cjs",
+  "author": "OpenCET",
+  "license": "MIT",
+  "scripts": {
+    "sync": "node sync-dist.cjs",
+    "start": "npm run sync && electron .",
+    "dist": "npm run sync && electron-builder --win dir",
+    "portable": "npm run sync && electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "43.3.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.opencet.desktop",
+    "productName": "OpenCET",
+    "copyright": "OpenCET 英语四六级在线学习平台",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.cjs",
+      "server.cjs",
+      "package.json",
+      "dist/**/*",
+      "build/icon.ico"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "dir"
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "compression": "normal"
+  }
+}

@@ -1,0 +1,99 @@
+/**
+ * CET 710 分换算表数据 —— **自动生成，不要手改**。
+ *
+ * 生成脚本：node tools/build-cet-scale.mjs
+ * 源数据：shared/cet-scale.json（整理自用户的《7_35分换算表.docx》）
+ */
+
+export interface ScaleRowData {
+  raw: number
+  score: number
+}
+
+export interface ScaleTableData {
+  id: string
+  name: string
+  max: number
+  scaleMax: number
+  sections: string[]
+  rows: ScaleRowData[]
+}
+
+export const CET_SCALE_TITLE = "CET 710 分换算表"
+
+export const CET_SCALE_NOTE = "听力、阅读各 35 分制（满分 248.5），写作、翻译各 15 分制（满分 106.5），四项相加即 710 分制总分。"
+
+export const CET_SCALE_SOURCE = "7_35分换算表.docx"
+
+export const CET_SCALE_TABLES: ScaleTableData[] = [
+  {
+    id: "s35",
+    name: "35 分换算表",
+    max: 35,
+    scaleMax: 248.5,
+    sections: ["听力","阅读"],
+    rows: [
+      { raw: 35, score: 248.5 },
+      { raw: 34, score: 238 },
+      { raw: 33, score: 227.5 },
+      { raw: 32, score: 220.5 },
+      { raw: 31, score: 213.5 },
+      { raw: 30, score: 206.5 },
+      { raw: 29, score: 199.5 },
+      { raw: 28, score: 192.5 },
+      { raw: 27, score: 185.5 },
+      { raw: 26, score: 178.5 },
+      { raw: 25, score: 175 },
+      { raw: 24, score: 171.5 },
+      { raw: 23, score: 168 },
+      { raw: 22, score: 164.5 },
+      { raw: 21, score: 161 },
+      { raw: 20, score: 157.5 },
+      { raw: 19, score: 154 },
+      { raw: 18, score: 154 },
+      { raw: 17, score: 150.5 },
+      { raw: 16, score: 147 },
+      { raw: 15, score: 143.5 },
+      { raw: 14, score: 140 },
+      { raw: 13, score: 136.5 },
+      { raw: 12, score: 133 },
+      { raw: 11, score: 129.5 },
+      { raw: 10, score: 126 },
+      { raw: 9, score: 126 },
+      { raw: 8, score: 122.5 },
+      { raw: 7, score: 119 },
+      { raw: 6, score: 119 },
+      { raw: 5, score: 115.5 },
+      { raw: 4, score: 112 },
+      { raw: 3, score: 108.5 },
+      { raw: 2, score: 105 },
+      { raw: 1, score: 105 },
+      { raw: 0, score: 101.5 },
+    ],
+  },
+  {
+    id: "s15",
+    name: "15 分换算表",
+    max: 15,
+    scaleMax: 106.5,
+    sections: ["写作","翻译"],
+    rows: [
+      { raw: 15, score: 106.5 },
+      { raw: 14, score: 100.5 },
+      { raw: 13, score: 94.5 },
+      { raw: 12, score: 90 },
+      { raw: 11, score: 85.5 },
+      { raw: 10, score: 81 },
+      { raw: 9, score: 76.5 },
+      { raw: 8, score: 72 },
+      { raw: 7, score: 67.5 },
+      { raw: 6, score: 63 },
+      { raw: 5, score: 58.5 },
+      { raw: 4, score: 55.5 },
+      { raw: 3, score: 52.5 },
+      { raw: 2, score: 49.5 },
+      { raw: 1, score: 46.5 },
+      { raw: 0, score: 43.5 },
+    ],
+  },
+]
